@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>楊皓程 HC Yang | PHP / Laravel 專案開發・物聯網 (IoT) 架構開發・SCI 論文與專利</title>
+  <meta name="description" content="楊皓程（HC Yang, Hao-Cheng Yang）個人官方網站。擅長 PHP 專案開發、精通 Laravel 框架、熟悉物聯網（IoT / AIoT）完整架構開發。代表作品包含 CUMI IoT 平台、Pureten 智慧水表平台、Gmail Notes 瀏覽器插件、「菜脯埕」故事性品牌經營案例、「中華文化經貿生技交流協會」形象行銷網站與「日月知識」網站設計、系統開發維護與資訊顧問，並發表多篇 SCI / EI 國際期刊論文與專利。" />
+  <meta name="keywords" content="楊皓程, HC Yang, Hao-Cheng Yang, PHP專案開發, Laravel, 物聯網架構開發, IoT, CUMI IoT平台, Pureten智慧水表, Gmail Notes, 菜脯埕, 中華文化經貿生技交流協會, 日月知識, aak.com.tw, Node-RED, MQTT, 逢甲大學, 亞洲大學" />
+  <meta name="author" content="楊皓程 (Hao-Cheng Yang)" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://hc.csv.tw/" />
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:site_name" content="楊皓程 HC Yang 個人官方網站" />
+  <meta property="og:title" content="楊皓程 HC Yang | PHP / Laravel 專案開發・物聯網架構開發・論文與專利" />
+  <meta property="og:description" content="擅長 PHP 專案與精通 Laravel，熟悉物聯網 (IoT) 完整架構開發。打造 CUMI IoT 平台、Pureten 智慧水表平台、Gmail Notes 插件、菜脯埕品牌經營、中華文化經貿生技交流協會網站與日月知識資訊顧問服務，收錄 ORCID 國際論文與 48 場大專院校授課經歷。" />
+  <meta property="og:url" content="https://hc.csv.tw/" />
+  <meta property="og:image" content="https://hc.csv.tw/logo.svg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="楊皓程 HC Yang | PHP / Laravel・物聯網架構開發" />
+  <meta name="twitter:description" content="CUMI IoT 平台、Pureten 智慧水表平台、Gmail Notes 插件、菜脯埕、中華文化經貿生技交流協會網站、日月知識資訊顧問與國際期刊論文著作。" />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="apple-touch-icon" href="logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- JSON-LD Structured Data: WebSite + Person + ProfilePage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://hc.csv.tw/#website",
+        "url": "https://hc.csv.tw/",
+        "name": "楊皓程 HC Yang 個人官方網站",
+        "inLanguage": "zh-Hant-TW",
+        "publisher": {
+          "@id": "https://hc.csv.tw/#person"
+        }
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "https://hc.csv.tw/#profilepage",
+        "url": "https://hc.csv.tw/",
+        "name": "楊皓程 (HC Yang) 個人經歷、代表專案與學術著作",
+        "mainEntity": {
+          "@id": "https://hc.csv.tw/#person"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://hc.csv.tw/#person",
+        "name": "楊皓程",
+        "alternateName": ["HC Yang", "Hao-Cheng Yang"],
+        "url": "https://hc.csv.tw/",
+        "image": "https://hc.csv.tw/logo.svg",
+        "email": "mailto:peter30234@gmail.com",
+        "jobTitle": "PHP / Laravel 系統架構師 & 物聯網 (IoT) 平台開發者",
+        "description": "擅長 PHP 專案開發、精通 Laravel 框架、熟悉物聯網 (IoT/AIoT) 架構開發。打造 CUMI IoT 平台、Pureten 智慧水表平台、Gmail Notes 瀏覽器插件、菜脯埕農產品品牌、中華文化經貿生技交流協會官方網站與日月知識資訊顧問服務。",
+        "knowsAbout": [
+          "PHP",
+          "Laravel",
+          "Internet of Things (IoT)",
+          "AIoT Architecture",
+          "MQTT",
+          "Node-RED",
+          "ESP8266 / Arduino",
+          "Python",
+          "Ubuntu / Nginx / MySQL",
+          "IT Consulting & System Development",
+          "E-Commerce & Brand Storytelling"
+        ],
+        "sameAs": [
+          "https://orcid.org/0000-0003-0505-0499",
+          "https://iot.cumi.co/",
+          "https://pureten.co/",
+          "https://gmail-notes.csv.tw/",
+          "https://tshaipoo.com/",
+          "https://cctbda.com/",
+          "https://aak.com.tw/"
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="site-header" id="top">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+        <img src="logo.svg" alt="楊皓程 HC Yang Logo" class="brand-logo-img" width="38" height="38" />
+        <span class="logo-text">楊皓程 <span>HC Yang</span></span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="主導覽列">
+        <a href="index.html" class="nav-link active">首頁總覽</a>
+        <a href="projects.html" class="nav-link">代表專案</a>
+        <a href="publications.html" class="nav-link">論文與專利</a>
+        <a href="experience.html" class="nav-link">歷年經歷</a>
+        <a href="#contact" class="nav-link">聯絡交流</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="切換選單">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-container">
+        <div class="hero-badge">
+          <span class="badge-dot"></span> PHP / Laravel 專案開發・物聯網架構開發・學術研究與專利
+        </div>
+        <h1 class="hero-title">
+          擅長 PHP 專案與精通 Laravel，<br />
+          熟悉物聯網 (IoT) 完整架構開發。
+        </h1>
+        <p class="hero-subtitle">
+          我是 <strong>楊皓程 (HC Yang)</strong>。深耕 PHP 全端專案開發、精通 <strong>Laravel</strong> 框架，並熟悉從底層感測控制、通訊協定到雲端管理平台的<strong>物聯網 (IoT/AIoT) 架構開發</strong>。成功打造機構級與跨國商用平台、生產力工具與品牌形象行銷案例，並發表多篇國際期刊論文（SCI / EI）與專利。
+        </p>
+
+        <div class="hero-actions">
+          <a href="projects.html" class="btn btn-primary">瀏覽代表專案</a>
+          <a href="publications.html" class="btn btn-secondary">查看論文與專利</a>
+          <a href="experience.html" class="btn btn-secondary">歷年 48 場經歷</a>
+        </div>
+
+        <!-- Key Metrics -->
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-number">PHP / Laravel</div>
+            <div class="metric-label">後端開發與商業系統架構</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-number">IoT 平台架構</div>
+            <div class="metric-label">公家機關與海外跨國落地</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-number">SCI / EI & 專利</div>
+            <div class="metric-label">6 篇國際論文・1 件專利・48+ 場授課</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section (Concise Executive Summary) -->
+    <section class="about-section" id="about">
+      <div class="section-container">
+        <div class="about-grid">
+          <div class="about-text-content">
+            <div class="section-label">ABOUT ME</div>
+            <h2 class="section-title">深耕軟硬體與雲端整合，兼具技術深度與商業落地視野</h2>
+            <p class="about-desc">
+              我專精於 <strong>PHP 專案開發</strong> 與 <strong>Laravel 現代化框架架構</strong>，同時<strong>熟悉物聯網 (IoT) 全棧架構開發</strong>——從底層微控制器（ESP8266、Arduino）、雙向通訊協定（MQTT、TCP/IP）、Node-RED 自動化流程，到高併發雲端後端平台與視覺化儀表板，皆具備完整的獨立規劃與商業落地實績。
+            </p>
+
+            <div class="speaker-highlights">
+              <div class="highlight-item">
+                <div class="highlight-icon">🐘</div>
+                <div>
+                  <h4>擅長 PHP 專案・精通 Laravel</h4>
+                  <p>專注於高效 RESTful API、後端資料庫架構與高擴充性商業管理系統開發。</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon">🌐</div>
+                <div>
+                  <h4>熟悉物聯網 (IoT) 架構開發與跨國落地</h4>
+                  <p>打造服務學校公家機關的 CUMI IoT 平台，以及落地菲律賓加水站體系的 Pureten 智慧水表平台。</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon">📄</div>
+                <div>
+                  <h4>國際期刊論文 (SCI / EI) 與新型專利</h4>
+                  <p>發表 3 篇國際期刊、3 篇 IEEE/ISC 研討會論文，並擁有省電觸發式發報裝置專利（M594232）。</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon">🎓</div>
+                <div>
+                  <h4>品牌數位行銷、資訊顧問與大專授課 (48 場次)</h4>
+                  <p>實踐「菜脯埕」故事性品牌、「中華文化經貿生技交流協會」形象行銷與「日月知識」資訊顧問服務，並於亞洲大學、逢甲大學授課分享。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Speaker Card -->
+          <div class="speaker-card-wrapper">
+            <div class="speaker-card">
+              <div class="speaker-avatar-wrap">
+                <div class="speaker-avatar">
+                  <img src="logo.svg" alt="楊皓程 HC Yang Logo" class="speaker-avatar-img" width="96" height="96" />
+                </div>
+              </div>
+              <h3 class="speaker-name">楊皓程 (HC Yang)</h3>
+              <p class="speaker-title">PHP / Laravel 專案開發 · 物聯網架構開發</p>
+
+              <div class="speaker-divider"></div>
+
+              <div class="contact-snippets">
+                <div class="snippet-item">
+                  <span class="snippet-title">LINE ID</span>
+                  <a href="https://line.me/ti/p/GDmlEFtK1Y" target="_blank" rel="noopener" class="snippet-link">
+                    peter30234 <span>(加我，請主動打招呼表明你是誰)</span>
+                  </a>
+                </div>
+                <div class="snippet-item">
+                  <span class="snippet-title">ORCID 學術識別碼</span>
+                  <a href="https://orcid.org/0000-0003-0505-0499" target="_blank" rel="noopener" class="snippet-link orcid-snippet-link">
+                    0000-0003-0505-0499 &nearr;
+                  </a>
+                </div>
+                <div class="snippet-item">
+                  <span class="snippet-title">主要核心領域</span>
+                  <p class="snippet-tags">PHP & Laravel / IoT 物聯網架構 / Node-RED / 品牌與形象行銷</p>
+                </div>
+              </div>
+
+              <a href="https://line.me/ti/p/GDmlEFtK1Y" target="_blank" rel="noopener" class="btn btn-secondary btn-block">
+                LINE 交流聯繫
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Compact Projects Summary Section -->
+    <section class="projects-section" id="projects">
+      <div class="section-container">
+        <div class="section-header-center">
+          <div class="section-label">FEATURED PROJECTS</div>
+          <h2 class="section-title">代表專案</h2>
+          <p class="section-subtitle">涵蓋物聯網雲端平台、跨國智慧水務、瀏覽器擴充插件、系統開發顧問與品牌形象行銷實績</p>
+        </div>
+
+        <div class="compact-projects-grid">
+          <article class="compact-project-item">
+            <div>
+              <div class="compact-proj-head">
+                <h3 class="compact-proj-title">CUMI IoT 平台</h3>
+                <span class="proj-badge badge-gov">學校公家機關</span>
+              </div>
+              <p class="compact-proj-desc">整合校園與公部門環境感測、電力監控、MQTT 雙向通訊與異常告警之雲端物聯網管理平台。</p>
+            </div>
+            <div class="compact-proj-foot">
+              <span class="compact-proj-domain">iot.cumi.co</span>
+              <a href="https://iot.cumi.co/" target="_blank" rel="noopener" class="compact-proj-link">前往網站 &nearr;</a>
+            </div>
+          </article>
+
+          <article class="compact-project-item">
+            <div>
+              <div class="compact-proj-head">
+                <h3 class="compact-proj-title">Pureten 智慧水表平台</h3>
+                <span class="proj-badge badge-global">菲律賓加水站體系</span>
+              </div>
+              <p class="compact-proj-desc">專為菲律賓連鎖加水站打造的跨國商用智慧水表監控、濾心預警與多據點帳務營運系統。</p>
+            </div>
+            <div class="compact-proj-foot">
+              <span class="compact-proj-domain">pureten.co</span>
+              <a href="https://pureten.co/" target="_blank" rel="noopener" class="compact-proj-link">前往網站 &nearr;</a>
+            </div>
+          </article>
+
+          <article class="compact-project-item">
+            <div>
+              <div class="compact-proj-head">
+                <h3 class="compact-proj-title">Gmail Notes</h3>
+                <span class="proj-badge badge-ext">瀏覽器擴充插件</span>
+              </div>
+              <p class="compact-proj-desc">無縫嵌入 Gmail 原生介面，針對個別商務信件快速新增、編輯與檢視私人備註與摘要標籤。</p>
+            </div>
+            <div class="compact-proj-foot">
+              <span class="compact-proj-domain">gmail-notes.csv.tw</span>
+              <a href="https://gmail-notes.csv.tw/" target="_blank" rel="noopener" class="compact-proj-link">前往網站 &nearr;</a>
+            </div>
+          </article>
+
+          <article class="compact-project-item">
+            <div>
+              <div class="compact-proj-head">
+                <h3 class="compact-proj-title">菜脯埕</h3>
+                <span class="proj-badge badge-brand">故事性品牌經營</span>
+              </div>
+              <p class="compact-proj-desc">行銷家裡的傳統農產品，結合土地記憶敘事、視覺重塑與電商轉型的自創品牌代表案例。</p>
+            </div>
+            <div class="compact-proj-foot">
+              <span class="compact-proj-domain">tshaipoo.com</span>
+              <a href="https://tshaipoo.com/" target="_blank" rel="noopener" class="compact-proj-link">前往網站 &nearr;</a>
+            </div>
+          </article>
+
+          <article class="compact-project-item">
+            <div>
+              <div class="compact-proj-head">
+                <h3 class="compact-proj-title">中華文化經貿生技交流協會</h3>
+                <span class="proj-badge badge-assoc">網站作品・形象行銷</span>
+              </div>
+              <p class="compact-proj-desc">融合文化、經貿與生技產業交流之協會官方網站作品，透過專業視覺與 SEO 佈局強化公信力。</p>
+            </div>
+            <div class="compact-proj-foot">
+              <span class="compact-proj-domain">cctbda.com</span>
+              <a href="https://cctbda.com/" target="_blank" rel="noopener" class="compact-proj-link">前往網站 &nearr;</a>
+            </div>
+          </article>
+
+          <article class="compact-project-item">
+            <div>
+              <div class="compact-proj-head">
+                <h3 class="compact-proj-title">日月知識</h3>
+                <span class="proj-badge badge-consult">網站設計・系統開發・資訊顧問</span>
+              </div>
+              <p class="compact-proj-desc">提供企業網站設計、PHP / Laravel 客製化系統開發維護與全方位數位轉型資訊顧問服務。</p>
+            </div>
+            <div class="compact-proj-foot">
+              <span class="compact-proj-domain">aak.com.tw</span>
+              <a href="https://aak.com.tw/" target="_blank" rel="noopener" class="compact-proj-link">前往網站 &nearr;</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="section-more-cta">
+          <a href="projects.html" class="btn btn-primary">
+            前往成功專案看更多 &rarr;
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Split Overview Section: Publications Summary & Experience Summary -->
+    <section class="overview-split-section" id="overview">
+      <div class="section-container">
+        <div class="overview-split-grid">
+          <!-- Portal 1: Academic Publications & Patents -->
+          <div class="overview-portal-card">
+            <div>
+              <div class="section-label">PUBLICATIONS & PATENTS</div>
+              <h2 class="section-title" style="font-size: 1.55rem;">學術發表・論文與專利摘要</h2>
+              <p class="about-desc" style="margin-bottom: 0;">
+                研究涵蓋數位訊號處理、深度學習微電網電力品質分類、物聯網微功耗智慧開關與嵌入式通訊。
+              </p>
+              <ul class="portal-summary-list">
+                <li>
+                  <span class="pub-index-badge badge-sci">ORCID</span>
+                  <span>學術識別碼：<a href="https://orcid.org/0000-0003-0505-0499" target="_blank" rel="noopener" class="pub-doi-link">0000-0003-0505-0499</a></span>
+                </li>
+                <li>
+                  <span class="pub-index-badge badge-ei">期刊論文</span>
+                  <span>發表 <strong>3 篇</strong>國際期刊論文（含 <strong>SCI</strong> <em>Energies</em> 2022、<strong>EI</strong> <em>JEST</em> 2019、SSRN 2023）</span>
+                </li>
+                <li>
+                  <span class="pub-index-badge badge-ieee">研討會</span>
+                  <span>發表 <strong>3 篇</strong>研討會論文（含 <strong>IEEE ICSSE</strong> 2020、<strong>IEEE IS3C</strong> 2018、ISC 2013）</span>
+                </li>
+                <li>
+                  <span class="pub-index-badge badge-patent">新型專利</span>
+                  <span>中華民國專利 <strong>M594232</strong>「省電觸發式發報裝置」（2020）</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <a href="publications.html" class="btn btn-secondary btn-block">
+                瀏覽完整論文題目、DOI 與專利清單 &rarr;
+              </a>
+            </div>
+          </div>
+
+          <!-- Portal 2: 5 Core Domains & 48 Lectures Experience -->
+          <div class="overview-portal-card">
+            <div>
+              <div class="section-label">EXPERTISE & 48 RECORDS</div>
+              <h2 class="section-title" style="font-size: 1.55rem;">五大專長與歷年經歷摘要</h2>
+              <p class="about-desc" style="margin-bottom: 0;">
+                2016–2024 年間於亞洲大學、逢甲大學等大專院校與機構累計 <strong>48 場次</strong>授課、專題指導與講座分享。
+              </p>
+              <ul class="portal-summary-list">
+                <li>
+                  <span class="lecture-cat-tag cat-career">職場與品牌</span>
+                  <span><strong>10 場</strong>：亞洲大學、逢甲大學「我的斜槓人生」、「自創者的品牌經營」</span>
+                </li>
+                <li>
+                  <span class="lecture-cat-tag cat-aiot">智慧物聯網</span>
+                  <span><strong>15 場</strong>：MQTT 雲端應用、ESP8266、Sonoff 智慧開關與大專專題指導</span>
+                </li>
+                <li>
+                  <span class="lecture-cat-tag cat-nodered">Node-RED</span>
+                  <span><strong>12 場</strong>：視覺化自動化流程、API 串接與 UI Dashboard 儀表板實作</span>
+                </li>
+                <li>
+                  <span class="lecture-cat-tag cat-cloud">雲端與系統</span>
+                  <span><strong>11 場</strong>：Ubuntu (Nginx + PHP-FPM + MySQL)、GCP 雲端、Python 與 TCP/IP</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <a href="experience.html" class="btn btn-secondary btn-block">
+                檢視五大專長與全部 48 場歷年紀錄 &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social & Contact Section -->
+    <section class="contact-section" id="contact">
+      <div class="section-container">
+        <div class="contact-card">
+          <div class="contact-header">
+            <div class="section-label">CONNECT & LINKS</div>
+            <h2 class="contact-title">聯絡與交流管道</h2>
+            <p class="contact-subtitle">
+              歡迎 PHP / Laravel 專案交流、物聯網架構討論或經驗交流分享。
+            </p>
+          </div>
+
+          <div class="contact-options-grid">
+            <div class="contact-option-card">
+              <div class="opt-icon line-color">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 5.92 2 10.75c0 3.09 1.83 5.82 4.67 7.29-.21.75-.82 2.73-.94 3.16-.16.54.19.53.4.4.17-.11 2.37-1.57 3.33-2.22.82.16 1.67.24 2.54.24 5.52 0 10-3.92 10-8.75S17.52 2 12 2z"/>
+                </svg>
+              </div>
+              <h3>LINE 交流</h3>
+              <p class="opt-desc">點擊直接加好友（加我，請主動打招呼表明你是誰）：</p>
+              <div class="contact-value">LINE ID: <strong>peter30234</strong></div>
+              <a href="https://line.me/ti/p/GDmlEFtK1Y" target="_blank" rel="noopener" class="btn btn-line btn-block">
+                開啟 LINE 加入好友
+              </a>
+            </div>
+
+            <div class="contact-option-card">
+              <div class="opt-icon email-color">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <h3>電子郵件</h3>
+              <p class="opt-desc">任何技術交流或專案討論歡迎寄信：</p>
+              <div class="contact-value"><strong>peter30234@gmail.com</strong></div>
+              <a href="mailto:peter30234@gmail.com" class="btn btn-secondary btn-block">
+                發送信件
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="logo.svg" alt="HC Yang Logo" class="footer-logo-img" width="24" height="24" />
+        <span><strong>楊皓程 HC Yang</strong> · 個人技術與經歷紀錄</span>
+      </div>
+      <div class="footer-copy">
+        &copy; 2026 HC Yang. All rights reserved.
+      </div>
+      <div class="footer-back-to-top">
+        <a href="#top">回到頂部 &uarr;</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="lectures.js"></script>
+</body>
+</html>
