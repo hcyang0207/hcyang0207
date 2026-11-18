@@ -153,8 +153,8 @@ const PROJECTS_DATA = [
   }
 ];
 
-// 專案篩選與搜尋狀態
-let currentProjectCategory = "all";
+// 專案篩選與搜尋狀態（預設選 IoT 平台）
+let currentProjectCategory = "iot";
 let currentProjectSearch = "";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -319,7 +319,7 @@ function renderProjects() {
 }
 
 function resetProjectFilters() {
-  currentProjectCategory = "all";
+  currentProjectCategory = "iot";
   currentProjectSearch = "";
 
   const searchInput = document.getElementById("projectSearch");
@@ -330,7 +330,7 @@ function resetProjectFilters() {
   const pillsContainer = document.getElementById("projectCategoryPills");
   if (pillsContainer) {
     pillsContainer.querySelectorAll(".pill-btn").forEach(btn => {
-      btn.classList.toggle("active", (btn.dataset.category || "all") === "all");
+      btn.classList.toggle("active", (btn.dataset.category || "all") === "iot");
     });
   }
 
