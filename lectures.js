@@ -753,3 +753,79 @@ function escapeHtml(str) {
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#039;");
 }
+
+/* ==========================================================================
+   Global Image Lightbox (通用圖片燈箱效果)
+   ========================================================================== */
+document.addEventListener("DOMContentLoaded", () => {
+  setupLightbox();
+});
+
+function setupLightbox() {
+  const lightboxLinks = document.querySelectorAll("a[data-lightbox]");
+  if (lightboxLinks.length === 0) return;
+
+  // 建立或取得燈箱 DOM
+  let overlay = document.getElementById("globalLightbox");
+  if (!overlay) {
+    overlay = document.createElement("div");
+    overlay.id = "globalLightbox";
+    overlay.className = "lightbox-overlay";
+    overlay.setAttribute("role", "dialog");
+    overlay.setAttribute("aria-modal", "true");
+    overlay.innerHTML = `
+      <div class="lightbox-container" onclick="event.stopPropagation()">
+        <button class="lightbox-close" id="lightboxClose" aria-label="關閉燈箱">&times;</button>
+        <img src="" alt="" class="lightbox-img" id="lightboxImg" />
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+      </div>
+    `;
+    document.body.appendChild(overlay);
+
+    // 關閉事件
+    const closeBtn = document.getElementById("lightboxClose");
+    if (closeBtn) {
+      closeBtn.addEventListener("click", closeLightbox);
+    }
+
+    overlay.addEventListener("click", closeLightbox);
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && overlay.classList.contains("active")) {
+        closeLightbox();
+      }
+    });
+  }
+
+  const lightboxImg = document.getElementById("lightboxImg");
+  const lightboxCaption = document.getElementById("lightboxCaption");
+
+  lightboxLinks.forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const imgSrc = link.getAttribute("href");
+      const title = link.getAttribute("data-title") || link.getAttribute("title") || "";
+
+      if (lightboxImg) {
+        lightboxImg.src = imgSrc;
+        lightboxImg.alt = title;
+      }
+      if (lightboxCaption) {
+        lightboxCaption.textContent = title;
+        lightboxCaption.style.display = title ? "block" : "none";
+      }
+
+      overlay.classList.add("active");
+      document.body.style.overflow = "hidden";
+    });
+  });
+}
+
+function closeLightbox() {
+  const overlay = document.getElementById("globalLightbox");
+  if (overlay) {
+    overlay.classList.remove("active");
+  }
+  document.body.style.overflow = "";
+}
+
