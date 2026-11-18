@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>精首先天智能皮紋採集系統 (Dermatoglyphics) 下載與安裝教學 | 楊皓程 HC Yang</title>
+  <meta name="description" content="精首先天智能皮紋採集系統（Dermatoglyphics）專屬驅動程式、主程式安裝包下載與全套影音操作教學，包含 FM220U 指紋機驅動安裝、系統安裝移除、使用者設定、採集教學及 Windows 11 安全防護排除指引。" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://hc.csv.tw/software/fp/" />
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:site_name" content="楊皓程 HC Yang 個人官方網站" />
+  <meta property="og:title" content="精首先天智能皮紋採集系統 (Dermatoglyphics) 下載與操作教學" />
+  <meta property="og:description" content="提供 FM220U 指紋機驅動、Dermatoglyphics Ver.120 系統安裝檔下載與多部實機操作教學影片。" />
+  <meta property="og:url" content="https://hc.csv.tw/software/fp/" />
+  <meta property="og:image" content="https://hc.csv.tw/logo.svg" />
+
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+  <link rel="apple-touch-icon" href="../../logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../style.css" />
+
+  <style>
+    .software-header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--tag-aiot-bg);
+      color: var(--tag-aiot-text);
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius-full);
+      margin-bottom: 1rem;
+    }
+
+    .download-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .download-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all var(--transition-fast);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .download-card:hover {
+      border-color: var(--color-primary-light);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .download-card.primary-card {
+      border-top: 4px solid var(--color-primary-light);
+    }
+
+    .download-card.accent-card {
+      border-top: 4px solid var(--color-accent);
+    }
+
+    .dl-card-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .dl-icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+      background: var(--bg-subtle);
+    }
+
+    .dl-card-header h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 0.25rem;
+    }
+
+    .dl-meta {
+      font-size: 0.82rem;
+      color: var(--text-subtle);
+    }
+
+    .dl-desc {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .tutorial-section {
+      margin-top: 2rem;
+    }
+
+    .tutorial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .video-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition-fast);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .video-card:hover {
+      box-shadow: var(--shadow-md);
+      border-color: var(--color-primary-light);
+      transform: translateY(-2px);
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      background: #000;
+      aspect-ratio: 16 / 9;
+    }
+
+    .video-wrapper video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .video-info {
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+
+    .video-step-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--color-primary-light);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.35rem;
+    }
+
+    .video-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.4;
+      margin-bottom: 0.5rem;
+    }
+
+    .video-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      line-height: 1.55;
+    }
+
+    .video-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--border-light);
+      padding-top: 0.85rem;
+      margin-top: auto;
+    }
+
+    .video-open-link {
+      font-size: 0.85rem;
+      color: var(--color-primary-light);
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .video-open-link:hover {
+      text-decoration: underline;
+    }
+
+    .notice-card {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .notice-icon {
+      font-size: 1.5rem;
+      color: var(--color-primary-light);
+      line-height: 1;
+    }
+
+    .notice-body h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1e40af;
+      margin-bottom: 0.35rem;
+    }
+
+    .notice-body p {
+      font-size: 0.9rem;
+      color: #1e3a8a;
+      line-height: 1.6;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="site-header" id="top">
+    <div class="nav-container">
+      <a href="../../index.html" class="brand-logo">
+        <img src="../../logo.svg" alt="楊皓程 HC Yang Logo" class="brand-logo-img" width="38" height="38" />
+        <span class="logo-text">楊皓程 <span>HC Yang</span></span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="主導覽列">
+        <a href="../../index.html" class="nav-link">首頁總覽</a>
+        <a href="../../projects.html" class="nav-link active">代表專案</a>
+        <a href="../../publications.html" class="nav-link">論文與專利</a>
+        <a href="../../experience.html" class="nav-link">歷年經歷</a>
+        <a href="../../projects.html#contact" class="nav-link">聯絡交流</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="切換選單">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Subpage Hero -->
+    <section class="page-hero">
+      <div class="page-hero-container">
+        <nav class="breadcrumb" aria-label="麵包屑導覽">
+          <a href="../../index.html">首頁</a>
+          <span class="breadcrumb-sep">/</span>
+          <a href="../../projects.html">成功代表專案</a>
+          <span class="breadcrumb-sep">/</span>
+          <span aria-current="page">精首先天智能皮紋採集系統</span>
+        </nav>
+        <div class="software-header-badge">
+          <span>專案軟體資源中心</span>
+        </div>
+        <h1 class="page-hero-title">精首先天智能皮紋採集系統</h1>
+        <p class="page-hero-desc">
+          <strong>Dermatoglyphics System</strong> 專為指紋與先天智能皮紋高精度數位化採樣所建構之專用桌面端應用軟體。本頁提供主程式最新安裝檔、FM220U 光學感測器驅動程式與完整的影音教學指引。
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="projects-section">
+      <div class="section-container" style="padding-top: 2rem;">
+        
+        <!-- Notice Tip -->
+        <div class="notice-card">
+          <div class="notice-icon">💡</div>
+          <div class="notice-body">
+            <h4>安裝前重要提示</h4>
+            <p>請先安裝 <strong>FM220U 指紋機驅動程式</strong>，再進行 <strong>Dermatoglyphics 主程式</strong> 安裝。若於 Windows 11 下載或執行時出現安全警告阻擋，請參考下方第 5 部影音教學進行解除防護設定。</p>
+          </div>
+        </div>
+
+        <!-- Download Cards Grid -->
+        <div class="section-label">SOFTWARE DOWNLOADS</div>
+        <h2 class="section-title">官方程式與驅動下載</h2>
+        <p class="section-subtitle">點擊直接下載最新版本安裝封裝檔</p>
+
+        <div class="download-grid">
+          <!-- Main App Card -->
+          <div class="download-card primary-card">
+            <div>
+              <div class="dl-card-header">
+                <div class="dl-icon-box">💻</div>
+                <div>
+                  <h3>Dermatoglyphics 主程式</h3>
+                  <div class="dl-meta">版本：Ver. 1.20 ｜ 更新日期：2022/08/04</div>
+                </div>
+              </div>
+              <p class="dl-desc">
+                精首先天智能皮紋採集系統專用主程式。支援十指紋路多角度高解析度影像採樣、受測者檔案管理與採樣資料加密封裝匯出功能。
+              </p>
+            </div>
+            <a href="./setup_Dermatoglyphics_v120.exe" class="btn btn-primary btn-block">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>下載主程式安裝檔 (EXE)</span>
+            </a>
+          </div>
+
+          <!-- Driver Card -->
+          <div class="download-card accent-card">
+            <div>
+              <div class="dl-card-header">
+                <div class="dl-icon-box">🔌</div>
+                <div>
+                  <h3>FM220U 指紋機驅動程式</h3>
+                  <div class="dl-meta">適用硬體：Startek FM220U ｜ 格式：ZIP</div>
+                </div>
+              </div>
+              <p class="dl-desc">
+                Startek FM220 / FM220U USB 光學指紋感應設備官方專屬驅動套件。安裝主軟體前必須先行安裝此驅動，確保硬體能被正確識別。
+              </p>
+            </div>
+            <a href="./fm220_driver.zip" class="btn btn-secondary btn-block">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>下載 FM220U 驅動程式 (ZIP)</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Video Tutorials Section -->
+        <div class="tutorial-section">
+          <div class="section-label">VIDEO TUTORIALS</div>
+          <h2 class="section-title">全套影音安裝與操作指引</h2>
+          <p class="section-subtitle">依照步驟觀看教學影片，快速完成環境建置與採集操作</p>
+
+          <div class="tutorial-grid">
+            <!-- Video 0 -->
+            <article class="video-card">
+              <div class="video-wrapper">
+                <video controls preload="metadata">
+                  <source src="./p0.mp4" type="video/mp4">
+                  您的瀏覽器不支援 HTML5 影片播放。
+                </video>
+              </div>
+              <div class="video-info">
+                <div>
+                  <div class="video-step-tag">Step 01・硬體驅動</div>
+                  <h3 class="video-title">FM220U 指紋機驅動程式 安裝教學</h3>
+                  <p class="video-desc">示範如何解壓縮驅動檔案、執行安裝精靈並確認裝置管理員已成功辨識 FM220U 設備。</p>
+                </div>
+                <div class="video-actions">
+                  <a href="./p0.mp4" target="_blank" class="video-open-link">
+                    在新分頁開啟全螢幕播放 &nearr;
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Video 1 -->
+            <article class="video-card">
+              <div class="video-wrapper">
+                <video controls preload="metadata">
+                  <source src="./p1.mp4" type="video/mp4">
+                  您的瀏覽器不支援 HTML5 影片播放。
+                </video>
+              </div>
+              <div class="video-info">
+                <div>
+                  <div class="video-step-tag">Step 02・軟體安裝</div>
+                  <h3 class="video-title">Dermatoglyphics 系統 安裝與移除教學</h3>
+                  <p class="video-desc">引導執行 setup_Dermatoglyphics_v120.exe 安裝路徑設定，以及日後完整移除系統之標準流程。</p>
+                </div>
+                <div class="video-actions">
+                  <a href="./p1.mp4" target="_blank" class="video-open-link">
+                    在新分頁開啟全螢幕播放 &nearr;
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Video 2 -->
+            <article class="video-card">
+              <div class="video-wrapper">
+                <video controls preload="metadata">
+                  <source src="./p2.mp4" type="video/mp4">
+                  您的瀏覽器不支援 HTML5 影片播放。
+                </video>
+              </div>
+              <div class="video-info">
+                <div>
+                  <div class="video-step-tag">Step 03・系統配置</div>
+                  <h3 class="video-title">Dermatoglyphics 設定與用戶管理教學</h3>
+                  <p class="video-desc">介紹系統基本組態設定、採樣員帳號建立、受測對象個人資料建檔及資料庫路徑管理。</p>
+                </div>
+                <div class="video-actions">
+                  <a href="./p2.mp4" target="_blank" class="video-open-link">
+                    在新分頁開啟全螢幕播放 &nearr;
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Video 3 -->
+            <article class="video-card">
+              <div class="video-wrapper">
+                <video controls preload="metadata">
+                  <source src="./p3.mp4" type="video/mp4">
+                  您的瀏覽器不支援 HTML5 影片播放。
+                </video>
+              </div>
+              <div class="video-info">
+                <div>
+                  <div class="video-step-tag">Step 04・實務操作</div>
+                  <h3 class="video-title">皮紋採集標準流程與技巧示範</h3>
+                  <p class="video-desc">手把手教學：手指按壓角度、中心點定位、清晰度辨識技巧與十指紋路完整採樣存檔作業。</p>
+                </div>
+                <div class="video-actions">
+                  <a href="./p3.mp4" target="_blank" class="video-open-link">
+                    在新分頁開啟全螢幕播放 &nearr;
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Video 4 -->
+            <article class="video-card">
+              <div class="video-wrapper">
+                <video controls preload="metadata">
+                  <source src="./p4.mp4" type="video/mp4">
+                  您的瀏覽器不支援 HTML5 影片播放。
+                </video>
+              </div>
+              <div class="video-info">
+                <div>
+                  <div class="video-step-tag">Step 05・疑難排除</div>
+                  <h3 class="video-title">Windows 11 惡意應用程式阻擋解決方法</h3>
+                  <p class="video-desc">說明因 Windows SmartScreen 或安全性防護機制跳出封鎖警告時，如何正確允許並繼續安裝。</p>
+                </div>
+                <div class="video-actions">
+                  <a href="./p4.mp4" target="_blank" class="video-open-link">
+                    在新分頁開啟全螢幕播放 &nearr;
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Back to Projects CTA -->
+        <div style="margin-top: 4rem; text-align: center;">
+          <a href="../../projects.html" class="btn btn-secondary">
+            &larr; 返回所有成功代表專案
+          </a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="../../logo.svg" alt="HC Yang Logo" class="footer-logo-img" width="24" height="24" />
+        <span><strong>楊皓程 HC Yang</strong> · 個人技術與專案作品</span>
+      </div>
+      <div class="footer-copy">
+        &copy; 2026 HC Yang. All rights reserved.
+      </div>
+      <div class="footer-back-to-top">
+        <a href="#top">回到頂部 &uarr;</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../lectures.js"></script>
+</body>
+</html>

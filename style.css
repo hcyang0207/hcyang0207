@@ -739,6 +739,11 @@ button {
   color: #3730a3;
 }
 
+.badge-desktop {
+  background: #fce7f3;
+  color: #9d174d;
+}
+
 .badge-tech {
   background: var(--bg-subtle);
   color: var(--text-muted);

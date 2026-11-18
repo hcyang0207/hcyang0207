@@ -5,6 +5,31 @@
 
 ---
 
+## [Update] - 2026-11-18
+### 新增精首先天智能皮紋採集系統 (Dermatoglyphics) 與網頁排版優化
+- **新增專用軟體資源頁面與排版現代化**（`software/fp/index.html`）：
+  - 將舊版簡易 HTML 與 PHP timestamp 標籤全面重構為全站統一之現代化設計系統（Navy / Blue 主視覺與 RWD 響應式佈局）。
+  - 加入「官方程式與驅動下載」區塊：提供 **Dermatoglyphics Ver. 1.20 主程式安裝檔**（EXE）與 **Startek FM220U 指紋機驅動程式**（ZIP）卡片式一鍵下載。
+  - 導入全套 HTML5 內嵌式「全套影音安裝與操作指引」清單：
+    1. `p0.mp4`：FM220U 指紋機驅動程式 安裝教學
+    2. `p1.mp4`：Dermatoglyphics皮紋採集系統 安裝/移除教學
+    3. `p2.mp4`：Dermatoglyphics皮紋採集系統 設定/用戶教學
+    4. `p3.mp4`：Dermatoglyphics皮紋採集系統 採集教學
+    5. `p4.mp4`：Dermatoglyphics皮紋採集系統 Windows 11 惡意應用程式阻擋解決方法
+  - 增設 Windows 11 SmartScreen 安全提示卡與新分頁全螢幕播放按鈕，大幅優化使用者操作體驗。
+- **代表專案頁面更新**（`projects.html`）：
+  - 於代表專案展示網格中新增「精首先天智能皮紋採集系統」專案卡片，詳列系統特點、光學硬體驅動整合與技術標籤，並連結至 `software/fp/index.html`。
+  - 更新 Meta 標題、說明與 Schema.org JSON-LD 結構化資料清單。
+- **首頁專案摘要更新**（`index.html`）：
+  - 於「代表專案」精選區塊加入「皮紋採集系統」卡片與快速跳轉連結。
+  - 更新 Person JSON-LD 中的 `knowsAbout` 與 `sameAs` 關聯。
+- **全站樣式與 SEO 索引支援**：
+  - `style.css`：新增 `.badge-desktop` 桌面軟體專屬標籤色彩樣式。
+  - `sitemap.xml`：新增 `https://hc.csv.tw/software/fp/` 索引項目。
+  - `README.md`：補充軟體專頁目錄路徑說明。
+
+---
+
 ## [Init] - 2026-11-18
 ### 初始版本建置（Orphan Branch 初始化基準）
 - **品牌識別與視覺**：
