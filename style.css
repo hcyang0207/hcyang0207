@@ -38,8 +38,8 @@
   --tag-cloud-text: #166534;
 
   /* Typography */
-  --font-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", sans-serif;
-  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", Roboto, Helvetica, Arial, sans-serif;
+  --font-display: 'Urbanist', -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", Roboto, sans-serif;
+  --font-body: 'Urbanist', -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", Roboto, Helvetica, Arial, sans-serif;
 
   /* Shadows */
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
@@ -138,8 +138,15 @@ button {
   transform: scale(1.05);
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--text-main);
+}
+
 .logo-text {
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1.15rem;
   letter-spacing: -0.2px;
   color: var(--text-main);
@@ -245,19 +252,20 @@ button {
 
 .page-hero-title {
   font-family: var(--font-display);
-  font-size: 2.25rem;
-  font-weight: 800;
+  font-size: 2.2rem;
+  font-weight: 600;
   color: var(--text-main);
-  line-height: 1.3;
+  line-height: 1.35;
   margin-bottom: 0.75rem;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.02em;
 }
 
 .page-hero-desc {
   font-size: 1.05rem;
   color: var(--text-muted);
   max-width: 780px;
-  line-height: 1.7;
+  line-height: 1.75;
+  font-weight: 400;
 }
 
 .section-more-cta {
@@ -304,10 +312,10 @@ button {
 
 .hero-title {
   font-family: var(--font-display);
-  font-size: 2.6rem;
-  line-height: 1.3;
-  font-weight: 800;
-  letter-spacing: -0.8px;
+  font-size: 2.5rem;
+  line-height: 1.35;
+  font-weight: 600;
+  letter-spacing: -0.02em;
   color: var(--text-main);
   margin-bottom: 1.25rem;
 }
@@ -407,7 +415,7 @@ button {
 .metric-number {
   font-family: var(--font-display);
   font-size: 1.75rem;
-  font-weight: 800;
+  font-weight: 600;
   color: var(--color-primary);
   line-height: 1.2;
   margin-bottom: 0.45rem;
@@ -433,7 +441,7 @@ button {
 .section-label {
   font-family: var(--font-display);
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 1.5px;
   color: var(--color-primary-light);
   text-transform: uppercase;
@@ -441,9 +449,9 @@ button {
 }
 
 .section-title {
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: -0.5px;
+  font-size: 1.9rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
   color: var(--text-main);
   line-height: 1.35;
   margin-bottom: 0.75rem;
@@ -751,19 +759,19 @@ button {
 
 .project-name {
   font-family: var(--font-display);
-  font-size: 1.2rem;
-  font-weight: 800;
+  font-size: 1.45rem;
+  font-weight: 600;
   color: var(--text-main);
   margin-bottom: 0.45rem;
-  letter-spacing: -0.3px;
+  letter-spacing: -0.015em;
 }
 
 .project-target {
   font-size: 0.98rem;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--color-primary-light);
   margin-bottom: 1rem;
-  line-height: 1.45;
+  line-height: 1.5;
 }
 
 .project-description {
@@ -880,7 +888,7 @@ button {
 
 .domain-title {
   font-size: 1.15rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.4;
   margin-bottom: 0.75rem;
   color: var(--text-main);
@@ -1032,7 +1040,7 @@ button {
 
 .pub-category-header h3 {
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-main);
   display: flex;
   align-items: baseline;
@@ -1043,7 +1051,7 @@ button {
 .pub-category-header h3 span {
   font-family: var(--font-display);
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--text-subtle);
 }
 
@@ -1080,7 +1088,7 @@ button {
 .pub-year {
   font-family: var(--font-display);
   font-size: 1rem;
-  font-weight: 800;
+  font-weight: 600;
   color: var(--text-main);
 }
 
@@ -1088,7 +1096,7 @@ button {
   display: inline-block;
   font-family: var(--font-display);
   font-size: 0.72rem;
-  font-weight: 800;
+  font-weight: 600;
   padding: 0.2rem 0.55rem;
   border-radius: 4px;
   letter-spacing: 0.4px;
@@ -1393,8 +1401,8 @@ button {
 .timeline-year-badge {
   display: inline-block;
   font-family: var(--font-display);
-  font-size: 1.1rem;
-  font-weight: 800;
+  font-size: 1.05rem;
+  font-weight: 600;
   background: var(--color-primary);
   color: #fff;
   padding: 0.35rem 1rem;

@@ -6,6 +6,20 @@
 ---
 
 ## [Update] - 2026-11-18
+### 全站字體瘦身（引入 Urbanist 現代幾何無襯線）、標題字重輕量化與徹底防快取配置
+- **視覺字體全面升級與瘦身（告別笨重粗黑感）**：
+  - 引入 Google Fonts 現代修長幾何無襯線字體 **`Urbanist`**（300, 400, 500, 600）搭配輕量細緻的 **`Noto Sans TC`**（300, 400, 500, 600）。
+  - **標題字重全面調降**：將全站 H1、H2、H3、Hero Title、Section Title、專案卡片名稱等由原本粗重的 `800/700` 全面調降為細緻輕盈的 `600/500`（Medium），大幅改善視覺壓迫感與笨重感，呈現如同 Apple/科技新創般的洗鍊呼吸空間。
+- **徹底解決快取問題（No-Cache 機制）**：
+  - 於全站所有 HTML 頁面（`index.html`、`projects.html`、`publications.html`、`experience.html`、`software/fp/index.html`）的 `<head>` 區塊標準配置防快取標籤：
+    - `<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />`
+    - `<meta http-equiv="Pragma" content="no-cache" />`
+    - `<meta http-equiv="Expires" content="0" />`
+  - 全站 CSS 與 JavaScript（`style.css`、`projects.js`、`lectures.js`）全面追加最新版本號戳記（`?v=20261118161125`），確保使用者重新整理立即載入最新設計。
+
+---
+
+## [Update] - 2026-11-18
 ### 代表專案篩選順序調整（IoT 平台置首並設為預設）
 - **代表專案頁面分類標籤調整**（`projects.html` & `projects.js`）：
   - 將「**IoT平台**」移至分類選單最前面，並設為**預設選取狀態**（載入時優先呈現 CUMI IoT 平台與 Pureten 智慧水表平台）。
