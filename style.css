@@ -1137,6 +1137,12 @@ h1, h2, h3, h4, h5, h6 {
   color: #92400e;
 }
 
+.badge-project {
+  background: #e0e7ff;
+  color: #3730a3;
+  border: 1px solid #c7d2fe;
+}
+
 .badge-award {
   background: #fef9c3;
   color: #854d0e;
