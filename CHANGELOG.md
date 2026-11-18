@@ -6,6 +6,17 @@
 ---
 
 ## [Update] - 2026-11-18
+### 集中管理字體與樣式引用（移除各頁肥大內嵌，統一由 style.css 載入）
+- **外掛字體集中化**：
+  - 將各頁 HTML 中重複的 Google Fonts `<link>` 與 `<link rel="preconnect">` 標籤全數抽除。
+  - 統一於 `style.css` 開頭以 `@import url('...')` 集中引入 `Urbanist` 與 `Noto Sans TC`，讓 HTML 結構維持極簡乾淨。
+- **軟體專頁樣式整併**：
+  - 將原本暫存在 `software/fp/index.html` 內超過 210 行的肥大 `<style>` 區塊全數抽出並整併至全站共用的 `style.css`，實現真正的關注點分離（Separation of Concerns）與樣式共用。
+- **更新快取時間戳記**：`style.css?v=20261118161928`。
+
+---
+
+## [Update] - 2026-11-18
 ### 大幅瘦身全站標題字重（由 600 下調至 400 Regular / 500 Medium）
 - **標題顯著瘦身與透氣排版優化**（`style.css`）：
   - 將全站標題類別（`h1` ~ `h6`、`.hero-title`、`.page-hero-title`、`.section-title`、`.project-name`）字重由原本偏重的 `600` 大幅調降為標準輕盈的 **`400 (Regular)`**。
