@@ -1943,6 +1943,20 @@ button {
   text-align: center;
 }
 
+/* Projects Single Row Layout & Search Filter Controls */
+.projects-single-row-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.project-single-row-card {
+  width: 100%;
+}
+
+
 .portal-summary-list li strong {
   color: var(--text-main);
   white-space: nowrap;

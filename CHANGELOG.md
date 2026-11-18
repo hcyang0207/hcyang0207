@@ -6,6 +6,24 @@
 ---
 
 ## [Update] - 2026-11-18
+### 代表專案結構優化（四大領域分類、搜尋與單欄直列呈現）與 CSS 快取控制
+- **代表專案頁面呈現與檢索升級**（`projects.html` & `projects.js`）：
+  - 將原本多欄（一行三個/多欄並排）改為**單欄直列呈現（一行呈現一個專案，`max-width: 960px`）**，大幅縮小視覺壓迫感與瀏覽長度。
+  - 導入比照歷年經歷頁面之**即時搜尋與分類篩選器**（`projects.js`）：
+    1. **全部專案**（7 個）
+    2. **企業系統維護**（日月知識）
+    3. **IoT平台**（CUMI IoT 平台、Pureten 智慧水表平台）
+    4. **品牌形象網站**（中華文化經貿生技交流協會、菜脯埕）
+    5. **軟體開發**（精首先天智能皮紋採集系統、Gmail Notes 瀏覽器外掛）
+  - 支援關鍵字即時檢索（名稱、目標客群、技術標籤與內文）、即時統計 Pill 徽章與查無結果友善提示。
+- **全站 CSS 引用快取控制（Cache Busting）**：
+  - 於全站所有 HTML 頁面（`index.html`、`projects.html`、`publications.html`、`experience.html`、`software/fp/index.html`）之 `style.css` 引用路徑後方加入版本時間戳記（`?v=20261118155749`），避免瀏覽器快取舊樣式。
+- **樣式表擴充**（`style.css`）：
+  - 新增 `.projects-single-row-grid` 與 `.project-single-row-card` 單列排版規則。
+
+---
+
+## [Update] - 2026-11-18
 ### 新增精首先天智能皮紋採集系統 (Dermatoglyphics) 與網頁排版優化
 - **新增專用軟體資源頁面與排版現代化**（`software/fp/index.html`）：
   - 將舊版簡易 HTML 與 PHP timestamp 標籤全面重構為全站統一之現代化設計系統（Navy / Blue 主視覺與 RWD 響應式佈局）。

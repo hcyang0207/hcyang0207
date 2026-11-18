@@ -29,7 +29,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=20261118155749" />
 
   <!-- JSON-LD Structured Data for Projects & Breadcrumb -->
   <script type="application/ld+json">
@@ -196,12 +196,81 @@
     <!-- Projects Showcase Section -->
     <section class="projects-section">
       <div class="section-container">
-        <div class="projects-grid">
-          <!-- Project 1: CUMI IoT Platform -->
-          <article class="project-showcase-card" id="cumi-iot">
+        
+        <!-- Search and Filter Controls -->
+        <div class="section-header-row" style="margin-bottom: 1.5rem;">
+          <div>
+            <div class="section-label">SEARCH & FILTER</div>
+            <h2 class="section-title">依專案類別與關鍵字檢索</h2>
+            <p class="section-subtitle">可依照四大專業領域分類或關鍵字快速篩選，掌握具體實績架構</p>
+          </div>
+
+          <div class="filter-controls-group">
+            <div class="search-box">
+              <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input type="text" id="projectSearch" placeholder="搜尋專案名稱、技術標籤（如：Laravel、IoT、皮紋、外掛）..." />
+              <button id="clearProjectSearch" class="btn-clear-search" style="display: none;">&times;</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filter Pills -->
+        <div class="category-pills" id="projectCategoryPills">
+          <button class="pill-btn active" data-category="all">全部專案 (<span id="count-proj-all">7</span>)</button>
+          <button class="pill-btn" data-category="enterprise">企業系統維護 (<span id="count-proj-enterprise">1</span>)</button>
+          <button class="pill-btn" data-category="iot">IoT平台 (<span id="count-proj-iot">2</span>)</button>
+          <button class="pill-btn" data-category="branding">品牌形象網站 (<span id="count-proj-branding">2</span>)</button>
+          <button class="pill-btn" data-category="software">軟體開發 (<span id="count-proj-software">2</span>)</button>
+        </div>
+
+        <!-- Single Row Projects Grid -->
+        <div class="projects-single-row-grid" id="projectsGrid">
+          <!-- 專案 1：企業系統維護 - 日月知識 -->
+          <article class="project-showcase-card project-single-row-card" id="aak" data-category="enterprise">
             <div class="project-card-top">
               <div class="project-badges">
-                <span class="proj-badge badge-gov">學校與公家機關專用</span>
+                <span class="proj-badge badge-consult">企業系統維護</span>
+                <span class="proj-badge badge-tech">資訊顧問服務</span>
+              </div>
+              <h2 class="project-name">日月知識</h2>
+              <p class="project-target">專注於企業網站設計、客製化系統開發維護與全方位資訊顧問之專業服務平台</p>
+              <p class="project-description">
+                結合多年 PHP / Laravel 全端系統開發、雲端伺服器維運與品牌數位行銷實務經驗，為企業與組織提供從形象網站設計、客製化商業資訊系統開發、長期技術維運到數位轉型資訊顧問的一站式解決方案。
+              </p>
+              <ul class="project-arch-list">
+                <li><strong>客製化網站與系統開發：</strong>依企業工作流量身打造高擴充性之 Web 系統、後台管理與 API 整合。</li>
+                <li><strong>長期穩定系統維護：</strong>涵蓋雲端主機架構規劃、資安更新、效能調校與資料庫備份維運。</li>
+                <li><strong>專業資訊顧問服務：</strong>協助企業評估數位工具導入、軟硬體架構整合與技術轉型策略。</li>
+              </ul>
+              <div class="project-tech-stack">
+                <span>網站設計</span>
+                <span>系統開發維護</span>
+                <span>資訊顧問</span>
+                <span>PHP / Laravel</span>
+                <span>企業數位轉型</span>
+              </div>
+            </div>
+            <div class="project-card-bottom">
+              <span class="project-url-text">https://aak.com.tw/</span>
+              <a href="https://aak.com.tw/" target="_blank" rel="noopener" class="btn btn-primary btn-project-visit">
+                <span>前往日月知識網站</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- 專案 2：IoT平台 - CUMI IoT -->
+          <article class="project-showcase-card project-single-row-card" id="cumi-iot" data-category="iot">
+            <div class="project-card-top">
+              <div class="project-badges">
+                <span class="proj-badge badge-gov">IoT平台</span>
                 <span class="proj-badge badge-tech">IoT 雲端管理平台</span>
               </div>
               <h2 class="project-name">CUMI IoT 平台</h2>
@@ -235,11 +304,11 @@
             </div>
           </article>
 
-          <!-- Project 2: Pureten Smart Water Meter Platform -->
-          <article class="project-showcase-card" id="pureten">
+          <!-- 專案 3：IoT平台 - Pureten 智慧水表 -->
+          <article class="project-showcase-card project-single-row-card" id="pureten" data-category="iot">
             <div class="project-card-top">
               <div class="project-badges">
-                <span class="proj-badge badge-global">菲律賓加水站體系</span>
+                <span class="proj-badge badge-global">IoT平台</span>
                 <span class="proj-badge badge-tech">跨國商用智慧水務</span>
               </div>
               <h2 class="project-name">Pureten 智慧水表平台</h2>
@@ -273,125 +342,11 @@
             </div>
           </article>
 
-          <!-- Project 3: Gmail Notes Browser Extension -->
-          <article class="project-showcase-card" id="gmail-notes">
+          <!-- 專案 4：品牌形象網站 - 中華文化經貿生技交流協會 -->
+          <article class="project-showcase-card project-single-row-card" id="cctbda" data-category="branding">
             <div class="project-card-top">
               <div class="project-badges">
-                <span class="proj-badge badge-ext">瀏覽器擴充插件</span>
-                <span class="proj-badge badge-tech">生產力與信件備註工具</span>
-              </div>
-              <h2 class="project-name">Gmail Notes</h2>
-              <p class="project-target">專為 Gmail 打造的高效信件備註與資訊標記瀏覽器擴充套件（Browser Extension）</p>
-              <p class="project-description">
-                解決大量商務與專案信件往來時的上下文記憶痛點，讓使用者能直接在 Gmail 介面中針對個別郵件快速新增、編輯與檢視私人備註與摘要標籤。無縫融入原生信箱操作體驗，大幅提升日常郵件管理與專案追蹤效率。
-              </p>
-              <ul class="project-arch-list">
-                <li><strong>原生級 Gmail DOM 整合：</strong>直覺嵌入信件列表與內頁，操作流暢不干擾既有介面。</li>
-                <li><strong>即時備註與標籤檢索：</strong>一眼識別重要客戶來信背景、待辦事項與專案進度。</li>
-                <li><strong>輕量化與隱私優先：</strong>極速載入架構，專為重度郵件工作者打造的高效工具。</li>
-              </ul>
-              <div class="project-tech-stack">
-                <span>Browser Extension</span>
-                <span>Gmail 介面整合</span>
-                <span>信件備註管理</span>
-                <span>生產力工具開發</span>
-                <span>輕量化前端架構</span>
-              </div>
-            </div>
-            <div class="project-card-bottom">
-              <span class="project-url-text">https://gmail-notes.csv.tw/</span>
-              <a href="https://gmail-notes.csv.tw/" target="_blank" rel="noopener" class="btn btn-primary btn-project-visit">
-                <span>前往 Gmail Notes 網站</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-              </a>
-            </div>
-          </article>
-
-          <!-- Project 4: 精首先天智能皮紋採集系統 Dermatoglyphics -->
-          <article class="project-showcase-card" id="dermatoglyphics">
-            <div class="project-card-top">
-              <div class="project-badges">
-                <span class="proj-badge badge-desktop">專用桌面應用軟體</span>
-                <span class="proj-badge badge-tech">生物特徵與影像採樣</span>
-              </div>
-              <h2 class="project-name">精首先天智能皮紋採集系統</h2>
-              <p class="project-target">結合 FM220U 光學指紋感應器之高精度指紋與皮紋數位化採樣分析軟體</p>
-              <p class="project-description">
-                專為專業先天智能皮紋檢測機構設計的桌面端數據採集與檔案管理系統。軟體整合 Startek FM220U 高解析度光學指紋感測設備，具備精準的手指中心點定位、清晰度即時檢測、十指紋路結構化建檔、加密儲存與受測者資料庫管理，提供完整穩定的實體檢測作業流程。
-              </p>
-              <ul class="project-arch-list">
-                <li><strong>高解析光學設備整合：</strong>無縫驅動 Startek FM220U 指紋機，確保紋路影像清晰不失真。</li>
-                <li><strong>完整採集與建檔工作流：</strong>涵蓋受測者個人基本資料、十指多角度採樣檢視與資料庫匯出。</li>
-                <li><strong>教學與安裝資源配套：</strong>提供完整驅動安裝檔、主程式安裝包與 5 部實機操作影片指引。</li>
-              </ul>
-              <div class="project-tech-stack">
-                <span>Desktop Application</span>
-                <span>FM220U 驅動整合</span>
-                <span>皮紋影像辨識採集</span>
-                <span>客戶資料庫管理</span>
-                <span>Windows 系統軟體</span>
-              </div>
-            </div>
-            <div class="project-card-bottom">
-              <span class="project-url-text">https://hc.csv.tw/software/fp/</span>
-              <a href="software/fp/index.html" class="btn btn-primary btn-project-visit">
-                <span>前往皮紋採集系統下載頁</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-              </a>
-            </div>
-          </article>
-
-          <!-- Project 4: 菜脯埕 Tshaipoo -->
-          <article class="project-showcase-card" id="tshaipoo">
-            <div class="project-card-top">
-              <div class="project-badges">
-                <span class="proj-badge badge-brand">故事性品牌經營案例</span>
-                <span class="proj-badge badge-tech">自家農產品數位行銷</span>
-              </div>
-              <h2 class="project-name">菜脯埕</h2>
-              <p class="project-target">結合在地溫度與數位行銷，推廣家裡傳統農產品的故事性品牌經營實戰案例</p>
-              <p class="project-description">
-                從自家農產品出發，透過品牌視覺重塑、動人的在地故事敘事與電子商務網站建置，將傳統日曬菜脯轉化為具備文化溫度與高附加價值的現代伴手禮與料理精品。也是於大專院校分享「自創者的品牌經營」與「電子商務給我的啟示」之核心代表案例。
-              </p>
-              <ul class="project-arch-list">
-                <li><strong>故事性品牌定位：</strong>挖掘家族農產工藝與土地記憶，賦予傳統農產品鮮明的品牌靈魂。</li>
-                <li><strong>數位行銷與電商轉型：</strong>結合內容行銷、搜尋引擎優化（SEO）與直購電商體驗，開拓年輕客群。</li>
-                <li><strong>產學分享實戰教材：</strong>將真實品牌從零到一的經營甘苦，轉化為逢甲大學等校講座的實務案例。</li>
-              </ul>
-              <div class="project-tech-stack">
-                <span>故事性品牌經營</span>
-                <span>農產品數位轉型</span>
-                <span>電子商務行銷</span>
-                <span>自創品牌定位</span>
-                <span>內容敘事與視覺企劃</span>
-              </div>
-            </div>
-            <div class="project-card-bottom">
-              <span class="project-url-text">https://tshaipoo.com/</span>
-              <a href="https://tshaipoo.com/" target="_blank" rel="noopener" class="btn btn-primary btn-project-visit">
-                <span>前往菜脯埕品牌網站</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-              </a>
-            </div>
-          </article>
-
-          <!-- Project 5: 中華文化經貿生技交流協會 CCTBDA -->
-          <article class="project-showcase-card" id="cctbda">
-            <div class="project-card-top">
-              <div class="project-badges">
-                <span class="proj-badge badge-assoc">網站作品・形象行銷案例</span>
+                <span class="proj-badge badge-assoc">品牌形象網站</span>
                 <span class="proj-badge badge-tech">協會官方數位門戶</span>
               </div>
               <h2 class="project-name">中華文化經貿生技交流協會</h2>
@@ -425,35 +380,111 @@
             </div>
           </article>
 
-          <!-- Project 6: 日月知識 AAK -->
-          <article class="project-showcase-card" id="aak">
+          <!-- 專案 5：品牌形象網站 - 菜脯埕 -->
+          <article class="project-showcase-card project-single-row-card" id="tshaipoo" data-category="branding">
             <div class="project-card-top">
               <div class="project-badges">
-                <span class="proj-badge badge-consult">網站設計・系統開發維護</span>
-                <span class="proj-badge badge-tech">資訊顧問服務</span>
+                <span class="proj-badge badge-brand">品牌形象網站</span>
+                <span class="proj-badge badge-tech">自家農產品數位行銷</span>
               </div>
-              <h2 class="project-name">日月知識</h2>
-              <p class="project-target">專注於企業網站設計、客製化系統開發維護與全方位資訊顧問之專業服務平台</p>
+              <h2 class="project-name">菜脯埕</h2>
+              <p class="project-target">結合在地溫度與數位行銷，推廣家裡傳統農產品的故事性品牌經營實戰案例</p>
               <p class="project-description">
-                結合多年 PHP / Laravel 全端系統開發、雲端伺服器維運與品牌數位行銷實務經驗，為企業與組織提供從形象網站設計、客製化商業資訊系統開發、長期技術維運到數位轉型資訊顧問的一站式解決方案。
+                從自家農產品出發，透過品牌視覺重塑、動人的在地故事敘事與電子商務網站建置，將傳統日曬菜脯轉化為具備文化溫度與高附加價值的現代伴手禮與料理精品。也是於大專院校分享「自創者的品牌經營」與「電子商務給我的啟示」之核心代表案例。
               </p>
               <ul class="project-arch-list">
-                <li><strong>客製化網站與系統開發：</strong>依企業工作流量身打造高擴充性之 Web 系統、後台管理與 API 整合。</li>
-                <li><strong>長期穩定系統維護：</strong>涵蓋雲端主機架構規劃、資安更新、效能調校與資料庫備份維運。</li>
-                <li><strong>專業資訊顧問服務：</strong>協助企業評估數位工具導入、軟硬體架構整合與技術轉型策略。</li>
+                <li><strong>故事性品牌定位：</strong>挖掘家族農產工藝與土地記憶，賦予傳統農產品鮮明的品牌靈魂。</li>
+                <li><strong>數位行銷與電商轉型：</strong>結合內容行銷、搜尋引擎優化（SEO）與直購電商體驗，開拓年輕客群。</li>
+                <li><strong>產學分享實戰教材：</strong>將真實品牌從零到一的經營甘苦，轉化為逢甲大學等校講座的實務案例。</li>
               </ul>
               <div class="project-tech-stack">
-                <span>網站設計</span>
-                <span>系統開發維護</span>
-                <span>資訊顧問</span>
-                <span>PHP / Laravel</span>
-                <span>企業數位轉型</span>
+                <span>故事性品牌經營</span>
+                <span>農產品數位轉型</span>
+                <span>電子商務行銷</span>
+                <span>自創品牌定位</span>
+                <span>內容敘事與視覺企劃</span>
               </div>
             </div>
             <div class="project-card-bottom">
-              <span class="project-url-text">https://aak.com.tw/</span>
-              <a href="https://aak.com.tw/" target="_blank" rel="noopener" class="btn btn-primary btn-project-visit">
-                <span>前往日月知識網站</span>
+              <span class="project-url-text">https://tshaipoo.com/</span>
+              <a href="https://tshaipoo.com/" target="_blank" rel="noopener" class="btn btn-primary btn-project-visit">
+                <span>前往菜脯埕品牌網站</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- 專案 6：軟體開發 - 精首先天智能皮紋採集系統 -->
+          <article class="project-showcase-card project-single-row-card" id="dermatoglyphics" data-category="software">
+            <div class="project-card-top">
+              <div class="project-badges">
+                <span class="proj-badge badge-desktop">軟體開發</span>
+                <span class="proj-badge badge-tech">生物特徵與影像採樣</span>
+              </div>
+              <h2 class="project-name">精首先天智能皮紋採集系統</h2>
+              <p class="project-target">結合 FM220U 光學指紋感應器之高精度指紋與皮紋數位化採樣分析軟體</p>
+              <p class="project-description">
+                專為專業先天智能皮紋檢測機構設計的桌面端數據採集與檔案管理系統。軟體整合 Startek FM220U 高解析度光學指紋感測設備，具備精準的手指中心點定位、清晰度即時檢測、十指紋路結構化建檔、加密儲存與受測者資料庫管理，提供完整穩定的實體檢測作業流程。
+              </p>
+              <ul class="project-arch-list">
+                <li><strong>高解析光學設備整合：</strong>無縫驅動 Startek FM220U 指紋機，確保紋路影像清晰不失真。</li>
+                <li><strong>完整採集與建檔工作流：</strong>涵蓋受測者個人基本資料、十指多角度採樣檢視與資料庫匯出。</li>
+                <li><strong>教學與安裝資源配套：</strong>提供完整驅動安裝檔、主程式安裝包與 5 部實機操作影片指引。</li>
+              </ul>
+              <div class="project-tech-stack">
+                <span>Desktop Application</span>
+                <span>FM220U 驅動整合</span>
+                <span>皮紋影像辨識採集</span>
+                <span>客戶資料庫管理</span>
+                <span>Windows 系統軟體</span>
+              </div>
+            </div>
+            <div class="project-card-bottom">
+              <span class="project-url-text">https://hc.csv.tw/software/fp/</span>
+              <a href="software/fp/index.html" class="btn btn-primary btn-project-visit">
+                <span>前往皮紋採集系統下載頁</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- 專案 7：軟體開發 - Gmail Notes -->
+          <article class="project-showcase-card project-single-row-card" id="gmail-notes" data-category="software">
+            <div class="project-card-top">
+              <div class="project-badges">
+                <span class="proj-badge badge-ext">軟體開發</span>
+                <span class="proj-badge badge-tech">生產力與信件備註工具</span>
+              </div>
+              <h2 class="project-name">Gmail Notes</h2>
+              <p class="project-target">專為 Gmail 打造的高效信件備註與資訊標記瀏覽器擴充套件（Browser Extension）</p>
+              <p class="project-description">
+                解決大量商務與專案信件往來時的上下文記憶痛點，讓使用者能直接在 Gmail 介面中針對個別郵件快速新增、編輯與檢視私人備註與摘要標籤。無縫融入原生信箱操作體驗，大幅提升日常郵件管理與專案追蹤效率。
+              </p>
+              <ul class="project-arch-list">
+                <li><strong>原生級 Gmail DOM 整合：</strong>直覺嵌入信件列表與內頁，操作流暢不干擾既有介面。</li>
+                <li><strong>即時備註與標籤檢索：</strong>一眼識別重要客戶來信背景、待辦事項與專案進度。</li>
+                <li><strong>輕量化與隱私優先：</strong>極速載入架構，專為重度郵件工作者打造的高效工具。</li>
+              </ul>
+              <div class="project-tech-stack">
+                <span>Browser Extension</span>
+                <span>Gmail 介面整合</span>
+                <span>信件備註管理</span>
+                <span>生產力工具開發</span>
+                <span>輕量化前端架構</span>
+              </div>
+            </div>
+            <div class="project-card-bottom">
+              <span class="project-url-text">https://gmail-notes.csv.tw/</span>
+              <a href="https://gmail-notes.csv.tw/" target="_blank" rel="noopener" class="btn btn-primary btn-project-visit">
+                <span>前往 Gmail Notes 網站</span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                   <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
                   <polyline points="15 3 21 3 21 9"></polyline>
@@ -463,6 +494,15 @@
             </div>
           </article>
         </div>
+
+        <!-- No Results Fallback -->
+        <div id="noProjectResults" class="empty-state-card" style="display: none; margin-top: 2rem;">
+          <div class="empty-icon">🔍</div>
+          <h3>找不到符合條件的代表專案</h3>
+          <p>請嘗試更換搜尋關鍵字，或切換至不同專案類別標籤。</p>
+          <button class="btn btn-secondary" onclick="resetProjectFilters()">重設篩選條件</button>
+        </div>
+
       </div>
     </section>
 
@@ -529,6 +569,6 @@
     </div>
   </footer>
 
-  <script src="lectures.js"></script>
+  <script src="projects.js"></script>
 </body>
 </html>
