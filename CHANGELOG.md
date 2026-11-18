@@ -6,6 +6,16 @@
 ---
 
 ## [Update] - 2026-11-18
+### 大幅瘦身全站標題字重（由 600 下調至 400 Regular / 500 Medium）
+- **標題顯著瘦身與透氣排版優化**（`style.css`）：
+  - 將全站標題類別（`h1` ~ `h6`、`.hero-title`、`.page-hero-title`、`.section-title`、`.project-name`）字重由原本偏重的 `600` 大幅調降為標準輕盈的 **`400 (Regular)`**。
+  - 將次級卡片標題（`.domain-title`、`.pub-category-header h3`、`.lecture-title`）由 `600` 調降為 **`500 (Medium)`**。
+  - 將字距（`letter-spacing`）由原本緊貼的負字距微調擴展至 `0.01em`，呈現細緻修長的高級現代極簡美學。
+- **更新全站快取版本號**：`style.css?v=20261118161613`。
+
+---
+
+## [Update] - 2026-11-18
 ### 全站字體瘦身（引入 Urbanist 現代幾何無襯線）、標題字重輕量化與徹底防快取配置
 - **視覺字體全面升級與瘦身（告別笨重粗黑感）**：
   - 引入 Google Fonts 現代修長幾何無襯線字體 **`Urbanist`**（300, 400, 500, 600）搭配輕量細緻的 **`Noto Sans TC`**（300, 400, 500, 600）。
