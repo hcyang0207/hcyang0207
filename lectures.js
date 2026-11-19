@@ -452,7 +452,7 @@ const CATEGORY_MAP = {
 };
 
 // State
-let currentCategory = "all";
+let currentCategory = "career";
 let currentSearch = "";
 let isTimelineExpanded = false;
 const DEFAULT_COLLAPSED_COUNT = 6;

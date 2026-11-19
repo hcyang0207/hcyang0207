@@ -855,8 +855,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .domain-cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .domain-cards-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .domain-card {
@@ -868,6 +874,10 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   transition: all var(--transition-fast);
   box-shadow: var(--shadow-sm);
+}
+
+.domain-card:last-child {
+  grid-column: 1 / -1;
 }
 
 .domain-card:hover {
