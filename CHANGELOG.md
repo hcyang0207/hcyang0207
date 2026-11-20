@@ -6,6 +6,14 @@
 ---
 
 ## [Update] - 2026-11-20
+### 更新 Google Tag Manager (GTM) 容器 ID 為 GTM-N45F698S
+- **分析與追蹤代碼容器更新**（全站 5 個 HTML 頁面）：
+  - 將 `index.html`、`projects.html`、`experience.html`、`publications.html` 及 `software/fp/index.html` 的 GTM 容器 ID 從 `GTM-WVZ2XX22` 替換為新容器 `GTM-N45F698S`。
+- **快取版本號更新**：全站更新為 `style.css?v=20261120094444` 與 `lectures.js?v=20261120094444`。
+
+---
+
+## [Update] - 2026-11-20
 ### 全站導入 Google Tag Manager (GTM) 追蹤代碼
 - **分析與追蹤代碼佈署**（全站 5 個 HTML 頁面）：
   - 於 `index.html`、`projects.html`、`experience.html`、`publications.html` 及 `software/fp/index.html` 的 `<head>` 頂部加入 Google Tag Manager（ID: `GTM-WVZ2XX22`）與 `dataLayer` / `gtag` 初始化腳本。
