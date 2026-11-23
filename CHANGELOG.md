@@ -5,6 +5,22 @@
 
 ---
 
+## [Update] - 2026-11-23
+### 全面深化 SEO 架構與社群標籤優化
+- **社群與分享標籤完整化**（全站 5 個 HTML 頁面）：
+  - 補齊全站 `twitter:card`、`twitter:title`、`twitter:description`、`twitter:image` 與 `og:image:alt` 標籤，確保各社群平台轉貼能生成高質感預覽卡片。
+  - 加入 `<meta name="theme-color" content="#1e3a8a">`，提升行動裝置與瀏覽器 UI 沉浸感。
+  - 加入 Google Fonts 之 `preconnect` 預先連線設定，加速字體載入效能與降低 LCP 延遲。
+- **結構化資料強化**（`software/fp/index.html`）：
+  - 導入 `SoftwareApplication` 與 `BreadcrumbList` 之 JSON-LD 結構化資料，提升軟體下載中心之搜尋引擎 Rich Snippet（豐富結果）曝光率。
+- **圖片與資源效能優化**（`publications.html`）：
+  - 獎狀縮圖加入 `loading="lazy"` 與 `decoding="async"`，優化首屏算繪與 Core Web Vitals 體驗。
+- **Sitemap 更新**（`sitemap.xml`）：
+  - 將所有頁面之 `<lastmod>` 更新為 `2026-11-23`。
+- **快取版本號更新**：全站更新為 `style.css?v=20261123155354` 與 `lectures.js?v=20261123155354`。
+
+---
+
 ## [Update] - 2026-11-20
 ### 更新 Google Tag Manager (GTM) 容器 ID 為 GTM-N45F698S
 - **分析與追蹤代碼容器更新**（全站 5 個 HTML 頁面）：
