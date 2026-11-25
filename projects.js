@@ -158,23 +158,6 @@ let currentProjectCategory = "iot";
 let currentProjectSearch = "";
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Mobile Nav Toggle
-  const toggleBtn = document.getElementById("menuToggle");
-  const mainNav = document.getElementById("mainNav");
-  if (toggleBtn && mainNav) {
-    toggleBtn.addEventListener("click", () => {
-      mainNav.classList.toggle("open");
-      toggleBtn.classList.toggle("active");
-    });
-
-    mainNav.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        mainNav.classList.remove("open");
-        toggleBtn.classList.remove("active");
-      });
-    });
-  }
-
   // 檢查 URL 參數中的 category
   const params = new URLSearchParams(window.location.search);
   const catParam = params.get("category");

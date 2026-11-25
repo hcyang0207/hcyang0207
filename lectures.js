@@ -652,23 +652,6 @@ function renderLectures() {
 }
 
 function setupEventListeners() {
-  // Mobile Nav Toggle
-  const toggleBtn = document.getElementById("menuToggle");
-  const mainNav = document.getElementById("mainNav");
-  if (toggleBtn && mainNav) {
-    toggleBtn.addEventListener("click", () => {
-      mainNav.classList.toggle("open");
-      toggleBtn.classList.toggle("active");
-    });
-
-    mainNav.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        mainNav.classList.remove("open");
-        toggleBtn.classList.remove("active");
-      });
-    });
-  }
-
   // Search Input
   const searchInput = document.getElementById("lectureSearch");
   const clearBtn = document.getElementById("clearSearch");

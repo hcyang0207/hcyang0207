@@ -42,7 +42,7 @@
 
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="apple-touch-icon" href="logo.svg" />
-  <link rel="stylesheet" href="style.css?v=20261123155354" />
+  <link rel="stylesheet" href="style.css?v=20261125-ui" />
 
   <!-- JSON-LD Structured Data: Person (ORCID) + ScholarlyArticles + Breadcrumb -->
   <script type="application/ld+json">
@@ -163,6 +163,7 @@
   </script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">跳至主要內容</a>
   <!-- Navigation -->
   <header class="site-header" id="top">
     <div class="nav-container">
@@ -171,23 +172,23 @@
         <span class="logo-text">楊皓程 <span>HC Yang</span></span>
       </a>
 
-      <nav class="main-nav" id="mainNav" aria-label="主導覽列">
-        <a href="index.html" class="nav-link">首頁總覽</a>
-        <a href="projects.html" class="nav-link">代表專案</a>
-        <a href="publications.html" class="nav-link active">論文與專利</a>
-        <a href="experience.html" class="nav-link">歷年經歷</a>
-        <a href="#contact" class="nav-link">聯絡交流</a>
-      </nav>
-
-      <button class="menu-toggle" id="menuToggle" aria-label="切換選單">
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="網站選單" aria-controls="mainNav" aria-expanded="false">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
       </button>
+
+      <nav class="main-nav" id="mainNav" aria-label="主導覽列">
+        <a href="index.html" class="nav-link">首頁總覽</a>
+        <a href="projects.html" class="nav-link">代表專案</a>
+        <a href="publications.html" class="nav-link active" aria-current="page">論文與專利</a>
+        <a href="experience.html" class="nav-link">歷年經歷</a>
+        <a href="#contact" class="nav-link">聯絡交流</a>
+      </nav>
     </div>
   </header>
 
-  <main>
+  <main id="main-content" tabindex="-1">
     <!-- Subpage Hero -->
     <section class="page-hero">
       <div class="page-hero-container">
@@ -563,7 +564,8 @@
     </div>
   </footer>
 
-  <script src="lectures.js?v=20261123155354"></script>
+  <script src="lectures.js?v=20261125-ui"></script>
+  <script src="navigation.js?v=20261125-ui"></script>
 </body>
 </html>
 

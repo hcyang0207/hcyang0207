@@ -42,7 +42,7 @@
 
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="apple-touch-icon" href="logo.svg" />
-  <link rel="stylesheet" href="style.css?v=20261123155354" />
+  <link rel="stylesheet" href="style.css?v=20261125-ui" />
 
   <!-- JSON-LD Structured Data: WebSite + Person + ProfilePage -->
   <script type="application/ld+json">
@@ -109,6 +109,7 @@
   </script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">跳至主要內容</a>
   <!-- Navigation -->
   <header class="site-header" id="top">
     <div class="nav-container">
@@ -117,41 +118,35 @@
         <span class="logo-text">楊皓程 <span>HC Yang</span></span>
       </a>
 
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="網站選單" aria-controls="mainNav" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
       <nav class="main-nav" id="mainNav" aria-label="主導覽列">
-        <a href="index.html" class="nav-link active">首頁總覽</a>
+        <a href="index.html" class="nav-link active" aria-current="page">首頁總覽</a>
         <a href="projects.html" class="nav-link">代表專案</a>
         <a href="publications.html" class="nav-link">論文與專利</a>
         <a href="experience.html" class="nav-link">歷年經歷</a>
         <a href="#contact" class="nav-link">聯絡交流</a>
       </nav>
-
-      <button class="menu-toggle" id="menuToggle" aria-label="切換選單">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
     </div>
   </header>
 
-  <main>
+  <main id="main-content" tabindex="-1">
     <!-- Hero Section -->
     <section class="hero-section">
       <div class="hero-container">
-        <div class="hero-badge">
-          <span class="badge-dot"></span> PHP / Laravel 專案開發・物聯網架構開發・學術研究與專利
-        </div>
-        <h1 class="hero-title">
-          擅長 PHP 專案與精通 Laravel，<br />
-          熟悉物聯網 (IoT) 完整架構開發。
-        </h1>
+        <p class="hero-name">楊皓程 HC Yang</p>
+        <h1 class="hero-title">PHP / Laravel 全端開發與物聯網系統整合</h1>
         <p class="hero-subtitle">
-          我是 <strong>楊皓程 (HC Yang)</strong>。深耕 PHP 全端專案開發、精通 <strong>Laravel</strong> 框架，並熟悉從底層感測控制、通訊協定到雲端管理平台的<strong>物聯網 (IoT/AIoT) 架構開發</strong>。成功打造機構級與跨國商用平台、生產力工具與品牌形象行銷案例，並發表多篇國際期刊論文（SCI / EI）與專利。
+          我從電路、感測器與通訊協定做到雲端管理平台，將軟硬體整合應用於校園、公部門與跨國智慧水務，也開發瀏覽器擴充工具。
         </p>
 
         <div class="hero-actions">
-          <a href="projects.html" class="btn btn-primary">瀏覽代表專案</a>
-          <a href="publications.html" class="btn btn-secondary">查看論文與專利</a>
-          <a href="experience.html" class="btn btn-secondary">歷年 50+ 場經歷</a>
+          <a href="#projects" class="btn btn-primary">查看代表專案</a>
+          <a href="#contact" class="btn btn-secondary">聯絡交流</a>
         </div>
 
         <!-- Key Metrics -->
@@ -262,7 +257,7 @@
         <div class="section-header-center">
           <div class="section-label">FEATURED PROJECTS</div>
           <h2 class="section-title">代表專案</h2>
-          <p class="section-subtitle">涵蓋物聯網雲端平台、跨國智慧水務、瀏覽器擴充插件、系統開發顧問與品牌形象行銷實績</p>
+          <p class="section-subtitle">從感測設備到雲端平台，以下六個案例涵蓋系統開發、應用工具與品牌網站。</p>
         </div>
 
         <div class="compact-projects-grid">
@@ -272,11 +267,11 @@
                 <h3 class="compact-proj-title">CUMI IoT 平台</h3>
                 <span class="proj-badge badge-gov">學校公家機關</span>
               </div>
-              <p class="compact-proj-desc">整合校園與公部門環境感測、電力監控、MQTT 雙向通訊與異常告警之雲端物聯網管理平台。</p>
+              <p class="compact-proj-desc">為校園與公部門整合環境感測、電力監控及 MQTT 通訊，讓管理人員能從雲端查看設備狀態並接收異常告警。</p>
             </div>
             <div class="compact-proj-foot">
               <span class="compact-proj-domain">iot.cumi.co</span>
-              <a href="https://iot.cumi.co/" target="_blank" rel="noopener" class="compact-proj-link">前往網站 &nearr;</a>
+              <a href="https://iot.cumi.co/" target="_blank" rel="noopener" class="compact-proj-link" aria-label="前往網站：CUMI IoT 平台（另開分頁）">前往網站 &nearr;</a>
             </div>
           </article>
 
@@ -286,11 +281,11 @@
                 <h3 class="compact-proj-title">Pureten 智慧水表平台</h3>
                 <span class="proj-badge badge-global">跨國軟硬體全棧整合</span>
               </div>
-              <p class="compact-proj-desc">自主包辦電路設計、PCB Layout、成品焊接製作到 PHP / Laravel 雲端多據點監控平台之跨國落地專案。</p>
+              <p class="compact-proj-desc">從電路、PCB 與韌體開發做到 Laravel 雲端平台，讓菲律賓連鎖加水站能監控各據點用水量與濾心狀態。</p>
             </div>
             <div class="compact-proj-foot">
               <span class="compact-proj-domain">pureten.co</span>
-              <a href="https://pureten.co/" target="_blank" rel="noopener" class="compact-proj-link">前往網站 &nearr;</a>
+              <a href="https://pureten.co/" target="_blank" rel="noopener" class="compact-proj-link" aria-label="前往網站：Pureten 智慧水表平台（另開分頁）">前往網站 &nearr;</a>
             </div>
           </article>
 
@@ -300,11 +295,11 @@
                 <h3 class="compact-proj-title">Gmail Notes</h3>
                 <span class="proj-badge badge-ext">瀏覽器擴充插件</span>
               </div>
-              <p class="compact-proj-desc">無縫嵌入 Gmail 原生介面，針對個別商務信件快速新增、編輯與檢視私人備註與摘要標籤。</p>
+              <p class="compact-proj-desc">開發整合 Gmail 介面的瀏覽器擴充套件，讓使用者直接在個別信件上新增、編輯與查看私人備註。</p>
             </div>
             <div class="compact-proj-foot">
               <span class="compact-proj-domain">gmail-notes.csv.tw</span>
-              <a href="https://gmail-notes.csv.tw/" target="_blank" rel="noopener" class="compact-proj-link">前往網站 &nearr;</a>
+              <a href="https://gmail-notes.csv.tw/" target="_blank" rel="noopener" class="compact-proj-link" aria-label="前往網站：Gmail Notes（另開分頁）">前往網站 &nearr;</a>
             </div>
           </article>
 
@@ -314,11 +309,11 @@
                 <h3 class="compact-proj-title">菜脯埕</h3>
                 <span class="proj-badge badge-brand">故事性品牌經營</span>
               </div>
-              <p class="compact-proj-desc">行銷家裡的傳統農產品，結合土地記憶敘事、視覺重塑與電商轉型的自創品牌代表案例。</p>
+              <p class="compact-proj-desc">為自家的傳統日曬菜脯規劃品牌視覺、撰寫產地故事並建置電商網站，讓顧客在線上認識與購買產品。</p>
             </div>
             <div class="compact-proj-foot">
               <span class="compact-proj-domain">tshaipoo.com</span>
-              <a href="https://tshaipoo.com/" target="_blank" rel="noopener" class="compact-proj-link">前往網站 &nearr;</a>
+              <a href="https://tshaipoo.com/" target="_blank" rel="noopener" class="compact-proj-link" aria-label="前往網站：菜脯埕（另開分頁）">前往網站 &nearr;</a>
             </div>
           </article>
 
@@ -328,11 +323,11 @@
                 <h3 class="compact-proj-title">中華文化經貿生技交流協會</h3>
                 <span class="proj-badge badge-assoc">網站作品・形象行銷</span>
               </div>
-              <p class="compact-proj-desc">融合文化、經貿與生技產業交流之協會官方網站作品，透過專業視覺與 SEO 佈局強化公信力。</p>
+              <p class="compact-proj-desc">規劃並建置協會官網，將組織資訊、會務活動與跨領域交流成果集中在同一個網站。</p>
             </div>
             <div class="compact-proj-foot">
               <span class="compact-proj-domain">cctbda.com</span>
-              <a href="https://cctbda.com/" target="_blank" rel="noopener" class="compact-proj-link">前往網站 &nearr;</a>
+              <a href="https://cctbda.com/" target="_blank" rel="noopener" class="compact-proj-link" aria-label="前往網站：中華文化經貿生技交流協會（另開分頁）">前往網站 &nearr;</a>
             </div>
           </article>
 
@@ -342,18 +337,18 @@
                 <h3 class="compact-proj-title">日月知識</h3>
                 <span class="proj-badge badge-consult">網站設計・系統開發・資訊顧問</span>
               </div>
-              <p class="compact-proj-desc">提供企業網站設計、PHP / Laravel 客製化系統開發維護與全方位數位轉型資訊顧問服務。</p>
+              <p class="compact-proj-desc">為企業設計網站、開發與維護 PHP / Laravel 系統，並協助評估數位工具與軟硬體整合方案。</p>
             </div>
             <div class="compact-proj-foot">
               <span class="compact-proj-domain">aak.com.tw</span>
-              <a href="https://aak.com.tw/" target="_blank" rel="noopener" class="compact-proj-link">前往網站 &nearr;</a>
+              <a href="https://aak.com.tw/" target="_blank" rel="noopener" class="compact-proj-link" aria-label="前往網站：日月知識（另開分頁）">前往網站 &nearr;</a>
             </div>
           </article>
         </div>
 
         <div class="section-more-cta">
           <a href="projects.html" class="btn btn-primary">
-            前往成功專案看更多 &rarr;
+            瀏覽完整專案列表 &rarr;
           </a>
         </div>
       </div>
@@ -497,7 +492,8 @@
     </div>
   </footer>
 
-  <script src="lectures.js?v=20261123155354"></script>
+  <script src="lectures.js?v=20261125-ui"></script>
+  <script src="navigation.js?v=20261125-ui"></script>
 </body>
 </html>
 
